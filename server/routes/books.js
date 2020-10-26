@@ -25,19 +25,37 @@ router.get('/', (req, res, next) => {
 
 //  GET the Book Details page in order to add a new Book
 router.get('/add', (req, res, next) => {
-
-    /*****************
-     * ADD CODE HERE *
-     *****************/
+  
+  res.render('books/details', {
+    title: 'Book Details',
+    books: {Title: "", Price: "", Author: "", Genre: ""}
+  });
 
 });
 
 // POST process the Book Details page and create a new Book - CREATE
 router.post('/add', (req, res, next) => {
-
-    /*****************
-     * ADD CODE HERE *
-     *****************/
+  
+  let bookToCreate = book({
+    "Title": req.body.Title,
+    "Author": req.body.Author,
+    "Price": req.body.Price,
+    "Author": req.body.Author,
+    "Genre": req.body.Genre
+  });
+  console.log(bookToCreate);
+  book.create(bookToCreate, (err) =>{
+      if(err)
+      {
+          console.log(err);
+          res.end(err);
+      }
+      else
+      {
+          //refresh the book list page
+          res.redirect('/books');
+      }
+  });
 
 });
 
