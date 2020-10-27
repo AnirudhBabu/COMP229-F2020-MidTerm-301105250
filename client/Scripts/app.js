@@ -18,9 +18,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <span><h5 class="modal-title" id="staticBackdropLabel">Confirm</h5></span>
-                        <span><button type="button" class="close" data-dismiss="modal" aria-label="Close"></span>
-                        <span aria-hidden="true">&times;</span>
+                        <h5 class="modal-title" id="staticBackdropLabel">Confirm</h5>
                         </button>
                     </div>
                     <div class="modal-body">
