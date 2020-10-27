@@ -1,4 +1,10 @@
-// moddules for node and express
+/*
+    File Name: app.js (config)
+    Student Name: Anirudh Babu
+    Student ID: 301105250
+    App Name: comp229-midterm-301105250
+*/
+// modules for node and express
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');

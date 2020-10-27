@@ -1,11 +1,21 @@
-/* custom JS goes here */
+/*
+    File Name: app.js (Scripts)
+    Student Name: Anirudh Babu
+    Student ID: 301105250
+    App Name: comp229-midterm-301105250
+*/
 
 // IIFE
 (function(){
+
+    
     if(document.title == "Books")
     {
+        //hooking up all the deleteButtons
         let deleteButtons = document.getElementsByClassName("btn-danger");
         
+        //adding a click event listener for all delete buttons and
+        //injecting a modal upon click
         for (let index = 0; index < deleteButtons.length; index++) {
             let button = deleteButtons[index];
             button.addEventListener("click", (event) => {
@@ -31,7 +41,9 @@
                     </div>
                 </div>
                 </div>`;
+                //displays the modal by clciking the invisible button
                 modalActivator.click();
+                //aftermath of user choice
                 document.getElementById("confirmButton").addEventListener("click", () => 
                 {
                     window.location.href = button.getAttribute("href");
