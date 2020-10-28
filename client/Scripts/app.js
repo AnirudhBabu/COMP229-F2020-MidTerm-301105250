@@ -7,7 +7,6 @@
 
 // IIFE
 (function(){
-
     
     if(document.title == "Books")
     {
